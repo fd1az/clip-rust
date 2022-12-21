@@ -1,0 +1,30 @@
+[package]
+name = "clipstash"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "clipstash"
+path = "src/lib/mod.rs"
+
+[dependencies]
+chrono = { version = "0.4.22", features = ["serde"] }
+der_derive = "0.6.0"
+derive_more = "0.99.17"
+handlebars = { version = "4.3.4", features = ["dir_source"] }
+rand = "0.8.5"
+serde = { version = "1.0.144", features = ["derive"] }
+serde_json = "1.0.85"
+sqlx = { version = "0.6.2", features = ["sqlite", "runtime-tokio-rustls", "macros", "chrono", "uuid"] }
+thiserror = "1.0.35"
+uuid = { version = "1.1.2", features = ["serde", "v4"] }
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+structopt = "0.3.26"
+dotenv = "0.15.0"
+tokio = "1.21.2"
+crossbeam-channel = "0.5.6"
+parking_lot = "0.12.1"
+base64 = "0.13.1"
+reqwest = { version = "0.11.12", features = ["blocking", "json", "cookies"] }
